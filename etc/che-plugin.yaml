@@ -51,7 +51,7 @@ endpoints:
       discoverable: false
 containers:
  - name: che-editor-gwt-ide
-   image: ksmster/che-editor-gwt-ide
+   image: eclipse/che-gwt-ide:nightly
    env:
        - name: SERVER_PORT
          value: 8080
