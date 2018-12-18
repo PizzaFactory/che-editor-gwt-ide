@@ -14,6 +14,8 @@ endpoints:
       type: ide
       discoverable: false
       path : gwt/ide/sidecar/entrypoint
+      secure: true
+      cookiesAuthEnabled: true
  -  name: "wsagent/http"
     public: true
     targetPort: 8087
@@ -21,6 +23,8 @@ endpoints:
       protocol: http
       path : api
       discoverable: false
+      secure: true
+      cookiesAuthEnabled: true
  -  name: "wsagent/ws"
     public: true
     targetPort: 8087
@@ -28,6 +32,8 @@ endpoints:
       protocol: ws
       path : wsagent
       discoverable: false
+      secure: true
+      cookiesAuthEnabled: true
  -  name: "exec-agent/http"
     public: true
     targetPort: 4412
@@ -35,6 +41,8 @@ endpoints:
       protocol: http
       path : process
       discoverable: false
+      secure: true
+      cookiesAuthEnabled: true
  -  name: "exec-agent/ws"
     public: true
     targetPort: 4412
@@ -42,6 +50,8 @@ endpoints:
       protocol: ws
       path : connect
       discoverable: false
+      secure: true
+      cookiesAuthEnabled: true
  -  name: "terminal"
     public: true
     targetPort: 4411
@@ -49,9 +59,11 @@ endpoints:
       protocol: ws
       path : pty
       discoverable: false
+      secure: true
+      cookiesAuthEnabled: true
 containers:
  - name: che-editor-gwt-ide
-   image: eclipse/che-gwt-ide:nightly
+   image: ksmster/che-gwt-ide
    env:
        - name: SERVER_PORT
          value: 8080
