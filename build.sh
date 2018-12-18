@@ -2,10 +2,11 @@
 set -e
 set -u
 
-if [ -f che-editor-plugin.tar.gz ]; then
-    rm che-editor-plugin.tar.gz
+if [ -f ./build/che-editor-plugin.tar.gz ]; then
+    rm -rf ./build
 fi
 
 cd etc
-tar zcvf ../che-editor-plugin.tar.gz .
+mkdir -p ../build
+tar zcf ../build/che-editor-plugin.tar.gz .
 
