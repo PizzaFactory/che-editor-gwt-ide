@@ -1,9 +1,9 @@
 version: 1.0.0
 type: Che Editor
-name: gwt-ide
-id: org.eclipse.che.editor.gwt
-title: Eclipse GWT IDE  for Eclipse Che
-description: Eclipse GWT IDE
+name: gwt-ide-pf
+id: jp.pizzafactory.che.editor.gwt
+title: Eclipse GWT IDE  for Eclipse Che (pf)
+description: Eclipse GWT IDE (PizzaFactory special)
 icon: https://pbs.twimg.com/profile_images/929088242456190976/xjkS2L-0_400x400.jpg
 endpoints:
  -  name: "che-gwt-ide-and-master"
@@ -63,7 +63,7 @@ endpoints:
       cookiesAuthEnabled: true
 containers:
  - name: che-editor-gwt-ide
-   image: eclipse/che-editor-gwt-ide:nightly
+   image: camino.azurecr.io/eclipse/che-editor-gwt-ide:nightly
    env:
        - name: SERVER_PORT
          value: 8080
